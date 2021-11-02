@@ -1,0 +1,16 @@
+<li id="carte" [ngClass]="{'list-group-item': true, 'list-group-item-success': postStatus === 'validé', 'list-group-item-danger': postStatus === 'invalidé'}">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-4">
+        <h3>{{postTitle}}</h3><br>
+      </div>
+      <div class="col-4">
+        <p>{{lastUpdate | date: 'yMMMMdd'}}</p>
+      </div>
+    </div>
+  </div>
+  <p>{{postComment}}</p>
+  <button class="btn btn-success" (click)="onLike()">J'aime</button>
+  <button class="btn btn-danger" (click)="onDislike()">J'aime pas</button>
+</li>
+
